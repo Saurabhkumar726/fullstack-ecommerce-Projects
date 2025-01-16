@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png'
 import Button from '@mui/material/Button';
 import CountryDropdown from '../CountryDropdown';
+import { IoMdSearch } from "react-icons/io";
+
+
 
 const Header = ()=>{
     return(
@@ -13,7 +16,7 @@ const Header = ()=>{
                </div>
              </div>
 
-             <div className="header">
+             <header className="header">
                 <div className="container">
                     <div className="row">
                         <div className="logoWrapper d-flex align-items-center col-sm-2"> 
@@ -22,11 +25,18 @@ const Header = ()=>{
 
                         <div className='col-sm-10 d-flex align-items-center part2'>
                             <CountryDropdown />
-                        </div>    
 
+                            {/* Header Search start here */}
+                               <div className='headerSearch ml-3 mr-3'>
+                                    <input type='text'/>
+                                    <Button><IoMdSearch/></Button>
+                               </div>
+                            {/* Header Search end here */}
+
+                        </div>    
                     </div>
                 </div>
-             </div>
+             </header>
         </div>
         </>
     )
