@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png'
 import Button from '@mui/material/Button';
 import CountryDropdown from '../CountryDropdown';
-import { IoMdSearch } from "react-icons/io";
-
+import { IoSearch } from "react-icons/io5";
 
 
 const Header = ()=>{
@@ -29,7 +28,7 @@ const Header = ()=>{
                             {/* Header Search start here */}
                                <div className='headerSearch ml-3 mr-3'>
                                     <input type='text'/>
-                                    <Button><IoMdSearch/></Button>
+                                    <Button><IoSearch/></Button>
                                </div>
                             {/* Header Search end here */}
 
