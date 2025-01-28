@@ -2,7 +2,12 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png'
 import Button from '@mui/material/Button';
 import CountryDropdown from '../CountryDropdown';
-import { IoSearch } from "react-icons/io5";
+import { FiUser } from "react-icons/fi";
+import { IoBagOutline } from "react-icons/io5";
+import SearchBox from './SerarchBox';
+import Navigation from './Navigation';
+
+
 
 
 const Header = ()=>{
@@ -25,17 +30,26 @@ const Header = ()=>{
                         <div className='col-sm-10 d-flex align-items-center part2'>
                             <CountryDropdown />
 
-                            {/* Header Search start here */}
-                               <div className='headerSearch ml-3 mr-3'>
-                                    <input type='text'/>
-                                    <Button><IoSearch/></Button>
-                               </div>
-                            {/* Header Search end here */}
+                            <SearchBox />
+
+                            <div className='part3 d-flex align-items-center ms-auto'>
+                                <Button className='circle me-3'><FiUser /></Button>
+                                <div className='ms-auto cartTab d-flex align-items-center'>
+                                    <span className='price'>Rs 30</span>
+                                    <div className='position-relative ms-3'>
+                                       <Button className='circle'><IoBagOutline /></Button>
+                                       <span className='count d-flex align-items-center justify-content-center'>1</span>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>    
                     </div>
                 </div>
              </header>
+
+            <Navigation />            
+
         </div>
         </>
     )
