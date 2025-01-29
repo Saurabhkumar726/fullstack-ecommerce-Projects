@@ -20,6 +20,13 @@ const Navigation = () =>{
                         <div className='col-sm-9 navPart2'>
                             <ul className='list list-inline'>
                                 <li className='list-inline-item'><Link to ="/">Home</Link></li>
+                                <li className='list-inline-item'><Link to ="/">Home</Link></li>
+                                <li className='list-inline-item'><Link to ="/">Home</Link></li>
+                                <li className='list-inline-item'><Link to ="/">Home</Link></li>
+                                <li className='list-inline-item'><Link to ="/">Home</Link></li>
+                                <li className='list-inline-item'><Link to ="/">Home</Link></li>
+                                <li className='list-inline-item'><Link to ="/">Home</Link></li>
+                                <li className='list-inline-item'><Link to ="/">Home</Link></li>
                             </ul>
                         </div>
                      </div>
