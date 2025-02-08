@@ -1,16 +1,20 @@
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/images/logo.png'
+import Logo from '../../assets/images/logo192.png'
 import Button from '@mui/material/Button';
 import CountryDropdown from '../CountryDropdown';
 import { FiUser } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
 import SearchBox from './SerarchBox';
 import Navigation from './Navigation';
-
+import { useContext } from 'react';
+import { MyContext } from '../../App';
 
 
 
 const Header = ()=>{
+
+    const context = useContext(MyContext);
+
     return(
         <>
         <div className="headerWrapper">
@@ -24,11 +28,15 @@ const Header = ()=>{
                 <div className="container">
                     <div className="row">
                         <div className="logoWrapper d-flex align-items-center col-sm-2"> 
-                            <Link to={'/'}><img src={Logo} alt ='Logo'/></Link>
+                            <Link to={'/'}><img src={Logo} alt ='Logo192'/></Link>
                         </div>
 
                         <div className='col-sm-10 d-flex align-items-center part2'>
-                            <CountryDropdown />
+
+                            {
+                                context.countryList.length!==0 && <CountryDropdown />
+                            }
+                            
 
                             <SearchBox />
 
