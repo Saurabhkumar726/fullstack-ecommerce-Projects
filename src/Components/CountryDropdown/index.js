@@ -45,12 +45,8 @@ const CountryDropdown = () => {
       }else{
         setCountryList(context.countryList);
       }
-
-      
-
       
     }
-
 
     return (
         <>
